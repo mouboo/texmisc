@@ -1,0 +1,202 @@
+\documentclass[aspectratio=169,12pt,handout,usenames,dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usetheme{default}
+%\usefonttheme{serif}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+\newcommand{\allpagesbool}{1}
+
+\begin{document}
+	%\author{}
+	\title{Interrater agreement and reliability of clinical tests\\ for assessment of patients with shoulder pain\\ in primary care.}
+	\subtitle{Apeldoorn AT, Den arend MC, Schuitemaker R, et al. \\
+			  Physiother Theory Pract. 2019;:1-20.}
+	%\logo{}
+	%\institute{}
+	\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\frame[plain]{\maketitle}
+
+\title{\textcolor{black}{Interbedömarsamstämmighet och reliabilitet av kliniska test för bedömning av patienter med skuldersmärta i primärvården.}}
+
+\subtitle{\vspace{5ex}\textcolor{black}{\textit{Förenklat:\\Om två terapeuter göra samma test på samma patient,\\ får de samma resultat?}}}
+	\frame[plain]{\maketitle}
+	
+		\begin{frame}
+		\frametitle{Parametrar}
+		\begin{itemize}
+			\item 21 kliniska skuldertest
+			\item 113 patienter
+			\item 36 terapeuter indelade i par
+			\item Utfallsvariabler:
+			\begin{itemize}
+				\item Positiv specifik samstämmighet
+				\item Negativ specifik samstämmighet
+				\item Cohens kappa ($\kappa$)
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Kliniska test}
+
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+					\item Scapula Position
+					\item External Rotation Resistance Test
+					\item Empty Can Test (Jobe test)
+					\item Full Can Test
+					\item Active Compression Test (O’Brien’s test)
+					\item Neer Test
+					\item Hawkins-Kennedy Test
+					\item Kim Test
+					\item Biceps Load II Test
+					\item Internal Rotation Resistance Strength Test (Zaslav Test)
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+		\begin{itemize}
+				\item Load and Shift Test
+				\item Acromioclavicular Joint Stress Test
+				\item Modified Scapular Assistance Test
+				\item Scapular Retraction Test
+				\item Impingement Relief Test
+				\item Sulcus Sign Test
+				\item Apprehension Test
+				\item Relocation Test
+				\item Release Test
+				\item Combined Reduction Test
+				\item Glenohumeral Internal Rotation Deficit Test
+		\end{itemize}
+\end{column}
+	\end{columns}
+	\end{frame}
+
+\begin{frame}
+	\frametitle{Positiv och negativ specifik samstämmighet}
+	\begin{columns}
+	\begin{column}{0.5\textwidth}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|cc}
+			& Terapeut 1  & Terapeut 2 \\
+			\hline
+			Patient 1 & pos & neg \\
+			Patient 2 & pos & pos \\
+			Patient 3 & neg & neg \\
+			Patient 4 & neg & pos \\
+			Patient 5 & neg & neg \\
+			Patient 6 & pos & neg \\
+			Patient 7 & neg & neg \\
+			... & ... & ... \\		
+			Patient n & pos & neg
+		\end{tabular}
+	}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+	
+	\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Positiv och negativ specifik samstämmighet}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			{
+				\setlength\extrarowheight{2pt}
+				\noindent\begin{tabular}{c|cc}
+					& Terapeut 1  & Terapeut 2 \\
+					\hline
+					Patient 1 &pos&neg\\
+					Patient 2 &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
+					Patient 3 &neg&neg\\
+					Patient 4 &neg&pos\\
+					Patient 5 &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
+					Patient 6 &pos&neg\\
+					Patient 7 &neg&neg\\
+					... &...&...\\		
+					Patient n &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
+				\end{tabular}
+			}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			
+			{\bfseries \colorbox{yellow}{Positiv} specifik samstämmighet:}\\
+			Om en terapeut får ett positivt resultat, hur ofta får den andra terapeuten också positivt resultat?\\[2ex]
+			
+			\textcolor{white}{{\bfseries Negativ specifik samstämmighet:}\\
+			Om en terapeut får ett negativt resultat, hur ofta får den andra terapeuten också negativt resultat?}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Positiv och negativ specifik samstämmighet}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			{
+				\setlength\extrarowheight{2pt}
+				\noindent\begin{tabular}{c|cc}
+					& Terapeut 1  & Terapeut 2 \\
+					\hline
+					Patient 1 &pos&neg\\
+					Patient 2 &pos&pos \\
+					Patient 3 &\cellcolor{yellow}neg&\cellcolor{yellow}neg\\
+					Patient 4 &neg&pos\\
+					Patient 5 &pos&pos \\
+					Patient 6 &pos&neg\\
+					Patient 7 &\cellcolor{yellow}neg&\cellcolor{yellow}neg\\
+					... &...&...\\		
+					Patient n &pos&pos \\
+				\end{tabular}
+			}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			
+			{\bfseries Positiv specifik samstämmighet:}\\
+			Om en terapeut får ett positivt resultat, hur ofta får den andra terapeuten också positivt resultat?\\[2ex]
+			
+			{\bfseries \colorbox{yellow}{Negativ} specifik samstämmighet:}\\
+			Om en terapeut får ett negativt resultat, hur ofta får den andra terapeuten också negativt resultat?\\[2ex]
+			
+			
+		\end{column}
+	\end{columns}
+\end{frame}
+	
+\begin{frame}
+	\frametitle{Cohens kappa ($\kappa$)}
+	\framesubtitle{Ett mått på reliabilitet mellan bedömare\\ som tar hänsyn till slumpmässig samstämmighet.}
+	\begin{itemize}
+
+		\item {\LARGE $\kappa = \frac{p_{o}-p_{e}} {1-p_{e}}$}\\[2ex]
+		\item $p_{o}$: Andel samstämmighet
+		\item $p_{e}$: Sannolikheten att samstämmighet beror på slumpen.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Resultat}
+	
+\end{frame}
+
+
+
+
+\end{document}
