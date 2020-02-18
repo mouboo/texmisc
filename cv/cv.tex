@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=0.5in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{url}
+\usepackage{parskip}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{ebgaramond}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{fix-cm}
+\usepackage{array}
+%\usepackage{charter}
+%\usepackage{times}
+
+\makeatletter
+\newcommand\CVsize{\@setfontsize\Huge{60}{0}}
+\makeatother  
+
+% Link formatting
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%Section formatting
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\newcommand{\sbt}{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ }
+
+\begin{document}
+\pagestyle{empty}
+
+%--------------------TITLE-------------
+\begin{tabularx}{\linewidth}
+		{@{} >{\centering\arraybackslash} p{2.65cm}
+		X
+		@{}p{2.65cm}}
+	%\hline
+	\CVsize CV & 
+	
+	{\centering
+		{\Huge Peter \textsc{Kvillegård} \\
+			\LARGE Fysioterapeut \\[5pt]
+			\normalsize Tel: 0760330019 \hspace{0.3em} \textbar \hspace{0.3em} E-post: peterkvillegard@gmail.com
+		}\par
+	}
+	
+	 & place for picture \\
+	%\hline
+\end{tabularx}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Utbildning
+\section{Utbildning}
+\begin{tabularx}{\textwidth}{r|X}	
+	\multirow{2}{*}{
+		\begin{tabular}{@{}r@{}} 
+			\textsc{Juni 2020}\\
+			(Examens-\\
+			datum)
+		\end{tabular}
+	}
+	& Kandidatexamen i \textsc{Fysioterapi}, \textbf{Lunds universitet}, Lund\\
+	&\footnotesize{\vspace{-5pt}
+		 \begin{itemize}[leftmargin=10pt, topsep=-12.5pt]
+
+		\item Praktikperiod 1: Geriatrikavdelning 2, Malmö. Här lärde jag mig att bemöta och hjälpa patienter med olika behov, och att dokumentera i Melior.
+		\item Praktikperiod 2: Barn- och ungdomshabiliteringen, Lund. Här lärde jag mig mer om patienter med olika neuro\-logiska tillstånd, samt undersökning och rehabiliteringsprinciper.
+		\item Kandidatuppsats: ``EMG-analys av m. deltoideus och m. infraspinatus vid utåt\-rotations\-övningar med och utan adduktionskraft.''
+		\end{itemize}\vspace{-30pt} 
+	}\\
+	\multicolumn{2}{c}{} \\
+	\textsc{Mars} 2016& \textsc{Certifierad massageterapeut}, \textbf{Axelsons gymnastiska institut}, Göteborg\\
+	%	&\\
+	\multicolumn{2}{c}{} \\
+\end{tabularx}
+
+%Section: Övriga utbildningar
+\section{Övriga utbildningar}
+\begin{tabularx}{\textwidth}{r|X}	
+	\textsc{Mars} 2003& \textsc{English for Science and Technology} 7.5hp, \textbf{Linnéuniversitetet}, Kalmar\\
+	\multicolumn{2}{c}{} \\
+	
+	\textsc{Juni} 2001& Gymnasieexamen, \textsc{Naturvetenskapsprogrammet teknisk gren},\\ 
+	&{Mönsterås gymnasium}, Mönsterås\\
+	\multicolumn{2}{c}{} \\
+\end{tabularx}
+
+%Section: Yrkeslivserfarenhet
+\section{Yrkeslivserfarenhet}
+\begin{tabularx}{\textwidth}{r|X}
+	\textsc{Mars 2016} & Trader at \textsc{Enoi} s.p.a., Milan \\
+	\textsc{-- Aug 2016}&\emph{Physical Natural Gas Trading}\\
+	&\footnotesize{Provided analysis of spreads, in particular time and location spreads, with emphasis on trading opportunities on the curve, also taking into account the availability of storage facilities. Became familiar with logistic implications of physical gas trading and developed knowledge of continental virtual hubs for gas exchange.}\\
+	\multicolumn{2}{c}{} \\
+	
+	\textsc{Jul 2006} & Maskinoperatör/programmerare på \textsc{Stranda AB}, Södra Bäckebo \\
+	-- \textsc{Sept 2015}&\footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
+	\multicolumn{2}{c}{} \\
+
+	\textsc{Jul 2006} & Maskinoperatör/programmerare på \textsc{Stranda AB}, Södra Bäckebo \\
+	-- \textsc{Sept 2015}&\footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
+\multicolumn{2}{c}{} \\
+\end{tabularx}
+
+%Section: Övriga meriter
+\section{Övriga meriter}
+\begin{itemize}
+	\item  
+\end{itemize}
+
+\section{Intressen och aktiviteter}
+Naturupplevelser, läsa böcker, , Programming\\
+Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
+Football, Travelling
+
+%Section: Languages
+\section{Referenser}
+Jeannette Unge
+
+\end{document}
