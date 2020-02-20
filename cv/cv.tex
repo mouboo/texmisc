@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[top=0.5in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage{url}
+\usepackage{graphicx}
 \usepackage{parskip}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{titlesec}
@@ -11,11 +12,13 @@
 \usepackage{multirow}
 \usepackage{fix-cm}
 \usepackage{array}
+\usepackage{tikz}
+
 %\usepackage{charter}
 %\usepackage{times}
 
 \makeatletter
-\newcommand\CVsize{\@setfontsize\Huge{60}{0}}
+\newcommand\CVsize{\@setfontsize\Huge{60}{60}}
 \makeatother  
 
 % Link formatting
@@ -33,36 +36,39 @@
 \pagestyle{empty}
 
 %--------------------TITLE-------------
-\begin{tabularx}{\linewidth}
-		{@{} >{\centering\arraybackslash} p{2.65cm}
-		X
-		@{}p{2.65cm}}
-	%\hline
-	\CVsize CV & 
-	
-	{\centering
-		{\Huge Peter \textsc{Kvillegård} \\
-			\LARGE Fysioterapeut \\[5pt]
-			\normalsize Tel: 0760330019 \hspace{0.3em} \textbar \hspace{0.3em} E-post: peterkvillegard@gmail.com
-		}\par
-	}
-	
-	 & place for picture \\
-	%\hline
-\end{tabularx}
+
+\hspace{-7pt}\begin{tikzpicture}
+\node[inner sep=0pt] (l) at (0,0) {};
+\node[inner sep=0pt] (m) at (0.5\linewidth,0) {};
+\node[inner sep=0pt] (r) at (1.008\linewidth,0) {};
+%\draw[thick,red] (l) -- (r);
+%\path[] (l) -- (m);
+
+\node at (m) {\parbox{\linewidth}{\centering \Huge Peter Kvillegård \\ \LARGE Fysioterapeut\\[5pt] \normalsize Tel: 0760330019 \hspace{0.3em} \textbar \hspace{0.3em} E-post: peterkvillegard@gmail.com}};
+
+\node[inner sep=0pt, anchor=east] (pic) at (r)
+{\includegraphics[width=.16\linewidth]{testpic}};
+
+\node[inner sep=0pt, anchor=west] at (l) {\CVsize CV};
+
+%\draw[<->,thick] (m) -- (r);
+
+%node[midway,fill=white] {Principia Mathematica};
+\end{tikzpicture}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Utbildning
+\vspace{-5pt}
 \section{Utbildning}
 \begin{tabularx}{\textwidth}{r|X}	
 	\multirow{2}{*}{
 		\begin{tabular}{@{}r@{}} 
-			\textsc{Juni 2020}\\
+			Juni 2020\\
 			(Examens-\\
 			datum)
 		\end{tabular}
 	}
-	& Kandidatexamen i \textsc{Fysioterapi}, \textbf{Lunds universitet}, Lund\\
+	& Kandidatexamen i \textsc{Fysioterapi}, Lunds universitet, Lund\\
 	&\footnotesize{\vspace{-5pt}
 		 \begin{itemize}[leftmargin=10pt, topsep=-12.5pt]
 
@@ -72,7 +78,7 @@
 		\end{itemize}\vspace{-30pt} 
 	}\\
 	\multicolumn{2}{c}{} \\
-	\textsc{Mars} 2016& \textsc{Certifierad massageterapeut}, \textbf{Axelsons gymnastiska institut}, Göteborg\\
+	Mars 2016& \textsc{Certifierad massageterapeut}, \textbf{Axelsons gymnastiska institut}, Göteborg\\
 	%	&\\
 	\multicolumn{2}{c}{} \\
 \end{tabularx}
@@ -80,10 +86,10 @@
 %Section: Övriga utbildningar
 \section{Övriga utbildningar}
 \begin{tabularx}{\textwidth}{r|X}	
-	\textsc{Mars} 2003& \textsc{English for Science and Technology} 7.5hp, \textbf{Linnéuniversitetet}, Kalmar\\
+	Mars 2003& \textsc{English for Science and Technology} 7.5hp, \textbf{Linnéuniversitetet}, Kalmar\\
 	\multicolumn{2}{c}{} \\
 	
-	\textsc{Juni} 2001& Gymnasieexamen, \textsc{Naturvetenskapsprogrammet teknisk gren},\\ 
+	Juni 2001& Gymnasieexamen, \textsc{Naturvetenskapsprogrammet teknisk gren},\\ 
 	&{Mönsterås gymnasium}, Mönsterås\\
 	\multicolumn{2}{c}{} \\
 \end{tabularx}
@@ -96,8 +102,8 @@
 	&\footnotesize{Provided analysis of spreads, in particular time and location spreads, with emphasis on trading opportunities on the curve, also taking into account the availability of storage facilities. Became familiar with logistic implications of physical gas trading and developed knowledge of continental virtual hubs for gas exchange.}\\
 	\multicolumn{2}{c}{} \\
 	
-	\textsc{Jul 2006} & Maskinoperatör/programmerare på \textsc{Stranda AB}, Södra Bäckebo \\
-	-- \textsc{Sept 2015}&\footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
+	Juli 2006 & Maskinoperatör/programmerare på \textsc{Stranda AB}, Södra Bäckebo \\
+	-- Sept 2015&\footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
 	\multicolumn{2}{c}{} \\
 
 	\textsc{Jul 2006} & Maskinoperatör/programmerare på \textsc{Stranda AB}, Södra Bäckebo \\
@@ -108,11 +114,13 @@
 %Section: Övriga meriter
 \section{Övriga meriter}
 \begin{itemize}
-	\item  
+	\item test1
+	\item test2
+	\item test3
 \end{itemize}
 
 \section{Intressen och aktiviteter}
-Naturupplevelser, läsa böcker, , Programming\\
+Gå omkring i skogen, läsa böcker, , Programming\\
 Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
 Football, Travelling
 
