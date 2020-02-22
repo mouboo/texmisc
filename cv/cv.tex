@@ -41,19 +41,13 @@
 \node[inner sep=0pt] (l) at (0,0) {};
 \node[inner sep=0pt] (m) at (0.5\linewidth,0) {};
 \node[inner sep=0pt] (r) at (1.008\linewidth,0) {};
-%\draw[thick,red] (l) -- (r);
-%\path[] (l) -- (m);
+
+\node[inner sep=0pt, anchor=west] at (l) {\CVsize CV};
 
 \node at (m) {\parbox{\linewidth}{\centering \Huge Peter Kvillegård \\ \LARGE Fysioterapeut\\[5pt] \normalsize Tel: 0760330019 \hspace{0.3em} \textbar \hspace{0.3em} E-post: peterkvillegard@gmail.com}};
 
 \node[inner sep=0pt, anchor=east] (pic) at (r)
 {\includegraphics[width=.16\linewidth]{portrait}};
-
-\node[inner sep=0pt, anchor=west] at (l) {\CVsize CV};
-
-%\draw[<->,thick] (m) -- (r);
-
-%node[midway,fill=white] {Principia Mathematica};
 \end{tikzpicture}
 
 %--------------------SECTIONS-----------------------------------
@@ -126,7 +120,7 @@
 \section{Yrkeslivserfarenhet}
 \begin{tabularx}{\textwidth}{r|X}	
 	Mars 2017 & Massageterapeut, Högsby \\
-	-- Sept 2017 &\footnotesize{Över sommaren masserade jag kunder i mitt hem vilket utvecklade min palpationsfärdighet, och jag träffade många olika människor med olika besvär}\\
+	-- Sept 2017 &\footnotesize{Över sommaren masserade jag kunder vilket utvecklade min palpationsfärdighet, och jag träffade många olika människor med olika besvär och behov av hjälp.}\\
 	\multicolumn{2}{c}{} \\
 
 	Feb 2007 & Maskinoperatör/programmerare på Stranda AB, Södra Bäckebo \\
@@ -141,35 +135,37 @@
 
 %Section: Övriga meriter
 \section{Övriga meriter}
-\begin{itemize}[leftmargin=1.5em]
-	\setlength\itemsep{-0.5em}
-	\item test1
-	\item test2
-	\item test3
+\begin{tabularx}{\textwidth}{X}
+	\vspace{-7pt}
+\begin{itemize}[leftmargin=1em]
+%	\item ?
+%	\item ?
+	\item Erfarenhet av olika typer av yoga samt aerobisk och muskelstärkande träning.
 \end{itemize}
+\end{tabularx}
 
-%Section: Övriga meriter
+%Section: Styrkor
 \section{Styrkor}
-\begin{itemize}[leftmargin=1.5em]
-	\setlength\itemsep{-0.5em}
-	\item test1
-	\item test2
-	\item test3
-\end{itemize}
+\begin{tabularx}{\textwidth}{X}
+	\vspace{-7pt}
+	\begin{itemize}[leftmargin=1em]
+		\item Bra på att bemöta människor
+		\item Noggrann och tålmodig
+		\item Stort intresse för att ta till mig ny kunskap
+	\end{itemize}
+\end{tabularx}
 
 \section{Intressen och aktiviteter}
-\textbullet Gå omkring i skogen, läsa böcker, , Programming\\
-Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
-Football, Travelling
+\begin{tabularx}{\textwidth}{X}
+Gå omkring i skogen, läsa alla typer av böcker, programmering, besöka British Columbia med min flickvän, vegetarisk matlagning, spela gitarr, och ta hand om djur.\\
+\\
+\end{tabularx}
 
-%Section: Languages
+
 \section{Referenser}
-Jeannette Unge
-
-Avid reader
-People skills, friendly and good bedside manner
-Cautios meticulous
-open minded and adaptable to working conditions
-lifelong passion for anatomy and health
+\begin{tabularx}{\textwidth}{X}
+Jeannette Unge, handledare för kandidatuppsats,\\ Tel: +46 46 222 89 58, E-post: jeannette.unge@med.lu.se
+\\
+\end{tabularx}
 
 \end{document}
