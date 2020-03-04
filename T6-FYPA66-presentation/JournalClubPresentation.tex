@@ -8,6 +8,8 @@
 \usetheme{default}
 %\usefonttheme{serif}
 \setbeamertemplate{navigation symbols}{}
+\usepackage{color,soul}
+
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -17,87 +19,186 @@
 
 \newcommand{\allpagesbool}{1}
 
+
+%Introduktion
+
+%Syfte/hypotes
+
+%Material och metoder
+
+%Resultat
+
+%Diskussion
+
+%Presentationen ska avslutas med:
+
+%Kvalitetsgranskning. Välj granskningsmall (checklista) som du tycker passar den artikel du valt Motivera din bedömning av studiens kvalitet. Ange källa/källor.
+
+%Klinisk relevans/applicerbarhet. Motivera din bedömning av studiens kliniska relevans/applicerbarhet. 
+
 \begin{document}
 	%\author{}
 	\title{Interrater agreement and reliability of clinical tests\\ for assessment of patients with shoulder pain\\ in primary care.}
 	\subtitle{Apeldoorn AT, Den arend MC, Schuitemaker R, et al. \\
-			  Physiother Theory Pract. 2019;:1-20.}
+			  Physiother Theory Pract. 2019;:1-20.\\[2em]
+			  \textcolor{black}{(Interbedömarsamstämmighet och reliabilitet av kliniska test\\ 
+			  för bedömning av patienter med skuldersmärta i primärvården)}}
 	%\logo{}
 	%\institute{}
 	\date{}
 	%\subject{}
 	%\setbeamercovered{transparent}
 	%\setbeamertemplate{navigation symbols}{}
-	\frame[plain]{\maketitle}
+	\frame[plain]{\vspace{2em}\maketitle} 
 
-\title{\textcolor{black}{Interbedömarsamstämmighet och reliabilitet av kliniska test för bedömning av patienter med skuldersmärta i primärvården.}}
-
-\subtitle{\vspace{5ex}\textcolor{black}{\textit{Förenklat:\\Om två terapeuter utför samma test på samma patient,\\ kan man lita på att de får samma resultat?}}}
-	\frame[plain]{\maketitle}
-	
-	\begin{frame}
-		\frametitle{Parametrar}
-		\begin{itemize}
-			\item 21 kliniska skuldertest
-			\item 113 patienter
-			\item 36 terapeuter indelade i par
-			\item Utfallsvariabler:
-			\begin{itemize}
-				\item Positiv specifik samstämmighet
-				\item Negativ specifik samstämmighet
-				\item Cohens kappa ($\kappa$)
-			\end{itemize}
-		\end{itemize}
-	\end{frame}
-	
 \begin{frame}
-		\frametitle{Kliniska test}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\begin{itemize}
-					\item Scapula Position
-					\item External Rotation Resistance Test
-					\item Empty Can Test (Jobe test)
-					\item Full Can Test
-					\item Active Compression Test (O’Brien’s test)
-					\item Neer Test
-					\item Hawkins-Kennedy Test
-					\item Kim Test
-					\item Biceps Load II Test
-					\item Internal Rotation Resistance Strength Test (Zaslav Test)
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-		\begin{itemize}
-				\item Load and Shift Test
-				\item Acromioclavicular Joint Stress Test
-				\item Modified Scapular Assistance Test
-				\item Scapular Retraction Test
-				\item Impingement Relief Test
-				\item Sulcus Sign Test
-				\item Apprehension Test
-				\item Relocation Test
-				\item Release Test
-				\item Combined Reduction Test
-				\item Glenohumeral Internal Rotation Deficit Test
-		\end{itemize}
-	\end{column}
-	\end{columns}
+	\frametitle{Introduktion}
+	\begin{itemize}
+		\item Många patienter söker för axelsmärta i primärvården
+		\item Undersökning med kliniska test (ex. Neers, Hawkins, Sulcus sign, etc)
+		\item Oklart hur reliabla dessa test är
+	\end{itemize}
 \end{frame}
 
-% Tester med highlights
 \begin{frame}
-	\frametitle{Kliniska test}
+	\frametitle{Syfte}
+	\begin{itemize}
+		\item Ta reda på om vanligt förekommande kliniska axeltest är tillförlitliga\\
+		genom att räkna ut specifik interbedömarsamstämmighet och reliabilitet
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``specifik interbedömarsamstämmighet''?)}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|ccl}
+			& Terapeut 1  & Terapeut 2 & \\
+			\cline{1-3}
+			Patient 1 & pos & pos & \textcolor{white}{$\leftarrow$ Positiv samstämmighet}\\
+			Patient 2 & neg & neg &\textcolor{white}{$\leftarrow$ Negativ samstämmighet}\\
+			Patient 3 & pos & neg &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+			Patient 4 & neg & pos &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+		\end{tabular}
+	}\par
+	\vspace{2em}
+	\par \textcolor{white}{Specifik interbedömarsamstämmighet = om en terapeut får ett resultat, hur ofta får den andra terapeuten samma resultat?}
+	\vspace{1em}
+	\par \textcolor{white}{I denna studie: $>$0.75 räknas som tillräckligt bra.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``specifik interbedömarsamstämmighet''?)}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|ccl}
+			& Terapeut 1  & Terapeut 2 & \\
+			\cline{1-3}
+			Patient 1 & pos & pos & \textcolor{black}{$\leftarrow$ Positiv samstämmighet}\\
+			Patient 2 & neg & neg &\textcolor{white}{$\leftarrow$ Negativ samstämmighet}\\
+			Patient 3 & pos & neg &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+			Patient 4 & neg & pos &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+		\end{tabular}
+	}\par
+	\vspace{2em}
+	\par \textcolor{white}{Specifik interbedömarsamstämmighet = om en terapeut får ett resultat, hur ofta får den andra terapeuten samma resultat?}
+	\vspace{1em}
+	\par \textcolor{white}{I denna studie: $>$0.75 räknas som tillräckligt bra.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``specifik interbedömarsamstämmighet''?)}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|ccl}
+			& Terapeut 1  & Terapeut 2 & \\
+			\cline{1-3}
+			Patient 1 & pos & pos & \textcolor{black}{$\leftarrow$ Positiv samstämmighet}\\
+			Patient 2 & neg & neg &\textcolor{black}{$\leftarrow$ Negativ samstämmighet}\\
+			Patient 3 & pos & neg &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+			Patient 4 & neg & pos &\textcolor{white}{$\leftarrow$ Inte samstämmiga}\\
+		\end{tabular}
+	}\par
+	\vspace{2em}
+	\par \textcolor{white}{Specifik interbedömarsamstämmighet = om en terapeut får ett resultat, hur ofta får den andra terapeuten samma resultat?}
+	\vspace{1em}
+	\par \textcolor{white}{I denna studie: $>$0.75 räknas som tillräckligt bra.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``specifik interbedömarsamstämmighet''?)}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|ccl}
+			& Terapeut 1  & Terapeut 2 & \\
+			\cline{1-3}
+			Patient 1 & pos & pos & \textcolor{black}{$\leftarrow$ Positiv samstämmighet}\\
+			Patient 2 & neg & neg &\textcolor{black}{$\leftarrow$ Negativ samstämmighet}\\
+			Patient 3 & pos & neg &\textcolor{black}{$\leftarrow$ Inte samstämmiga}\\
+			Patient 4 & neg & pos &\textcolor{black}{$\leftarrow$ Inte samstämmiga}\\
+		\end{tabular}
+	}\par
+	\vspace{2em}
+	\par \textcolor{white}{Specifik interbedömarsamstämmighet = om en terapeut får ett resultat, hur ofta får den andra terapeuten samma resultat?}
+	\vspace{1em}
+	\par \textcolor{white}{I denna studie: $>$0.75 räknas som tillräckligt bra.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``specifik interbedömarsamstämmighet''?)}
+	{
+		\setlength\extrarowheight{2pt}
+		\noindent\begin{tabular}{c|ccl}
+			& Terapeut 1  & Terapeut 2 & \\
+			\cline{1-3}
+			Patient 1 & pos & pos & \textcolor{black}{$\leftarrow$ Positiv samstämmighet}\\
+			Patient 2 & neg & neg &\textcolor{black}{$\leftarrow$ Negativ samstämmighet}\\
+			Patient 3 & pos & neg &\textcolor{black}{$\leftarrow$ Inte samstämmiga}\\
+			Patient 4 & neg & pos &\textcolor{black}{$\leftarrow$ Inte samstämmiga}\\
+		\end{tabular}
+	}\par
+	\vspace{2em}
+	\par \textcolor{black}{Specifik interbedömarsamstämmighet = om en terapeut får ett resultat, hur ofta får den andra terapeuten samma resultat?}
+	\vspace{1em}
+	\par \textcolor{black}{I denna studie: $>$0.75 räknas som tillräckligt bra.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{(Vad är ``reliabilitet''?)}
+	\begin{itemize}
+		\item Cohen's $\kappa$: ett mått på reliabilitet som tar hänsyn till att samstämmighet kan bero på slumpen
+		\item I denna studie:
+		\begin{itemize}
+			\item $<$0.2: Poor
+			\item 0.21--0.40: Fair
+			\item 0.41--0.60: Moderate
+			\item 0.61--0.80: Good
+			\item 0.81--1.00: Very good 	
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Metod}
+	\begin{itemize}
+		\item 36 terapeuter indelade i par
+		\item 113 patienter med axelsmärta
+		\item 21 kliniska test
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Metod / Kliniska test}
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\begin{itemize}
 				\item Scapula Position
 				\item External Rotation Resistance Test
-				\item \colorbox{yellow}{Empty Can Test (Jobe test)}
-				\item \colorbox{yellow}{Full Can Test}
+				\item Empty Can Test (Jobe test)
+				\item Full Can Test
 				\item Active Compression Test (O’Brien’s test)
-				\item \colorbox{yellow}{Neer Test}
-				\item \colorbox{yellow}{Hawkins-Kennedy Test}
+				\item Neer Test
+				\item Hawkins-Kennedy Test
 				\item Kim Test
 				\item Biceps Load II Test
 				\item Internal Rotation Resistance Strength Test (Zaslav Test)
@@ -110,9 +211,9 @@
 				\item Modified Scapular Assistance Test
 				\item Scapular Retraction Test
 				\item Impingement Relief Test
-				\item \colorbox{yellow}{Sulcus Sign Test}
-				\item \colorbox{yellow}{Apprehension Test}
-				\item \colorbox{yellow}{Relocation Test}
+				\item Sulcus Sign Test
+				\item Apprehension Test
+				\item Relocation Test
 				\item Release Test
 				\item Combined Reduction Test
 				\item Glenohumeral Internal Rotation Deficit Test
@@ -122,117 +223,12 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Positiv och negativ specifik samstämmighet}
-	\begin{columns}
-	\begin{column}{0.5\textwidth}
+		\frametitle{Resultat}
+	
 	{
-		\setlength\extrarowheight{2pt}
-		\noindent\begin{tabular}{c|cc}
-			& Terapeut 1  & Terapeut 2 \\
-			\hline
-			Patient 1 & pos & neg \\
-			Patient 2 & pos & pos \\
-			Patient 3 & neg & neg \\
-			Patient 4 & neg & pos \\
-			Patient 5 & neg & neg \\
-			Patient 6 & pos & neg \\
-			Patient 7 & neg & neg \\
-			... & ... & ... \\		
-			Patient n & pos & neg
-		\end{tabular}
-	}
-	\end{column}
-	\begin{column}{0.5\textwidth}
-	
-	\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Positiv och negativ specifik samstämmighet}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			{
-				\setlength\extrarowheight{2pt}
-				\noindent\begin{tabular}{c|cc}
-					& Terapeut 1  & Terapeut 2 \\
-					\hline
-					Patient 1 &pos&neg\\
-					Patient 2 &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
-					Patient 3 &neg&neg\\
-					Patient 4 &neg&pos\\
-					Patient 5 &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
-					Patient 6 &pos&neg\\
-					Patient 7 &neg&neg\\
-					... &...&...\\		
-					Patient n &\cellcolor{yellow}pos&\cellcolor{yellow}pos \\
-				\end{tabular}
-			}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			
-			{\bfseries \colorbox{yellow}{Positiv} specifik samstämmighet:}\\
-			Om en terapeut får ett positivt resultat, hur ofta får den andra terapeuten också positivt resultat?\\[2ex]
-			
-			\textcolor{white}{{\bfseries Negativ specifik samstämmighet:}\\
-			Om en terapeut får ett negativt resultat, hur ofta får den andra terapeuten också negativt resultat?}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Positiv och negativ specifik samstämmighet}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			{
-				\setlength\extrarowheight{2pt}
-				\noindent\begin{tabular}{c|cc}
-					& Terapeut 1  & Terapeut 2 \\
-					\hline
-					Patient 1 &pos&neg\\
-					Patient 2 &pos&pos \\
-					Patient 3 &\cellcolor{yellow}neg&\cellcolor{yellow}neg\\
-					Patient 4 &neg&pos\\
-					Patient 5 &pos&pos \\
-					Patient 6 &pos&neg\\
-					Patient 7 &\cellcolor{yellow}neg&\cellcolor{yellow}neg\\
-					... &...&...\\		
-					Patient n &pos&pos \\
-				\end{tabular}
-			}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			
-			{\bfseries Positiv specifik samstämmighet:}\\
-			Om en terapeut får ett positivt resultat, hur ofta får den andra terapeuten också positivt resultat?\\[2ex]
-			
-			{\bfseries \colorbox{yellow}{Negativ} specifik samstämmighet:}\\
-			Om en terapeut får ett negativt resultat, hur ofta får den andra terapeuten också negativt resultat?\\[2ex]
-			
-			
-		\end{column}
-	\end{columns}
-\end{frame}
-	
-\begin{frame}
-	\frametitle{Cohens kappa ($\kappa$)}
-	\framesubtitle{Ett mått på reliabilitet mellan bedömare\\ som tar hänsyn till slumpmässig samstämmighet.}
-	\begin{itemize}
-
-		\item {\LARGE $\kappa = \frac{p_{o}-p_{e}} {1-p_{e}}$}\\[2ex]
-		\item $p_{o}$: Andel samstämmighet
-		\item $p_{e}$: Sannolikheten att samstämmighet beror på slumpen.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-%	\frametitle{Resultat}
-	
-		{
 		\scriptsize
 		\setlength\extrarowheight{0pt}
 		\noindent\begin{tabular}{lccc}
-			\toprule
 			\multirow{2}{0.15\linewidth}{\\Test}&
 			\multirow{2}{0.15\linewidth}{\centering Positiv specifik\\samstämmighet}&
 			\multirow{2}{0.15\linewidth}{\centering Negativ specifik\\samstämmighet}& 
@@ -240,37 +236,53 @@
 			&&&\\
 			%Test & Positiv specifik samstämmighet & Negativ specifik samstämmighet & Cohens K  \\
 			\hline
-			Scapula position & pos & neg & \rule{0pt}{2.6ex}\\
-			External rotation resistance test & pos & pos & \\
-			Empty can test (Jobe test) & neg & neg &\\
-			Full can test & neg & pos &\\
-			Active compression test (O'Briens test) & neg & neg &\\
-			Neer test & pos & neg &\\
-			Hawkins-Kennedy test & neg & neg & \\
-			Kim test & neg & neg & \\
-			Biceps load II test &&& \\
-			Internal rotation resistance strength test & ... & ..&. \\		
-			Load and shift test & pos & neg& \\
-			Acromioclavicular joint stress test & & & \\
-			Modified scapular assistance test & & & \\
-			Scapular retraction test & & &\\
-			Impingement relief test & && \\
-			Sulcus sign test & && \\
-			Apprehension test & & & \\
-			Relocation test & & & \\
-			Release test & && \\
-			Combined reduction test & & & \\
-			Glenohumeral internal rotation deficit test & && \\
+			Scapula position & 0.71 & 0.73 & 0.44\rule{0pt}{2.6ex}\\
+			External rotation resistance test & 0.72 & \cellcolor{green}{0.78} & 0.50\\
+			Empty can test (Jobe test) & \cellcolor{green}{0.79} & 0.72 & 0.51\\
+			Full can test & \cellcolor{green}{0.75} & \cellcolor{green}{0.87} & \cellcolor{green}{0.62}\\
+			Active compression test (O'Briens test) & \cellcolor{green}{0.79} & 0.67 & 0.46\\
+			Neer test & \cellcolor{green}{0.83} & 0.59 & 0.43\\
+			Hawkins-Kennedy test & 0.74 & 0.59 & 0.33\\
+			Kim test & 0.56 & \cellcolor{green}{0.78} & 0.34\\
+			Biceps load II test & 0.40 & \cellcolor{green}{0.90} & 0.31 \\
+			Internal rotation resistance strength test & 0.64 & \cellcolor{green}{0.83} & 0.47 \\		
+			Load and shift test & 0.48 & \cellcolor{green}{0.91} & 0.40\\
+			Acromioclavicular joint stress test & 0.64 & \cellcolor{green}{0.82} & 0.47\\
+			Modified scapular assistance test & \cellcolor{green}{0.77} & 0.62 & 0.39\\
+			Scapular retraction test & 0.56 & 0.68 & 0.25\\
+			Impingement relief test & 0.62 & 0.72 & 0.35\\
+			Sulcus sign test & 0.45 & \cellcolor{green}{0.91} & 0.36 \\
+			Apprehension test & 0.70 & 0.62 & 0.32\\
+			Relocation test & \cellcolor{green}{0.76} & 0.50 & 0.27\\
+			Release test & \cellcolor{green}{0.81} & 0.64 & 0.46\\
+			Combined reduction test & 0.48 & \cellcolor{green}{0.78} & 0.26\\
+			Glenohumeral internal rotation deficit test & 0.68 & \cellcolor{green}{0.86} & 0.54\\
 			\bottomrule
 			
 		\end{tabular}
 	}
-	
 \end{frame}
 
 \begin{frame}
-	\frametitle{test}
+	\frametitle{Diskussion}
+	\begin{itemize}
+		\item Resultaten liknar andra studier som gjorts
+		\item Undviker felkällor, bl.a. genom symptomatiskt stabila patienter
+	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Kvalitetsgranskning}
+	Uppfyller samtliga punkter i Guidelines for Reporting Reliability and Agreement Studies (GRRAS).
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Klinisk relevans}
+	\begin{itemize}
+		\item Bra att känna till begränsningar när man tolkar resultat
+		\item Se kliniska test som \emph{en del} av den samlade bilden
+	\end{itemize}
+\end{frame}
 
 \end{document}
