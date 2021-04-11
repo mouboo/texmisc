@@ -35,27 +35,30 @@ local words = {
             [10^6] = "miljon",
             [10^9] = "miljard",
            [10^12] = "biljon",
+           [10^15] = "biljard",
 }
 
 local function translate(n)
     local t = {}
+    local oldn = n
 
     if n == 0 then 
         return words[0] 
     end
 
     -- Deal with numbers bigger than 999999.
-    for _, bignum in ipairs({10^12,10^9,10^6}) do
+    for _, bignum in ipairs({10^15,10^12,10^9,10^6}) do
         if floor(n/bignum) > 0 then 
             t[#t+1] = translate(floor(n/bignum))
             -- For millions (and bigger) "1" is "en", not "ett", 
             if t[#t] == words[1] then
                 t[#t] = "en"
             end
-            t[#t+1] = words[bignum]
             -- and plural form ending with "-er"
             if floor(n/bignum) > 1 then
-                t[#t] = t[#t].."er"
+                t[#t+1] = " "..words[bignum].."er "
+            else
+                t[#t+1] = " "..words[bignum].." "
             end
             n = n % bignum
         end 
@@ -87,12 +90,15 @@ local function translate(n)
         end
     end
         
-    -- Add spaces. "Million" and larger always get spaces,
-    -- "thousand" get spaces if the original number is
-    -- larger than 999999
-    -- TODO
-  
-    return concat(t,"")
+    local s = concat(t,"")
+    
+    if oldn >= 10^6 then
+        s = s:gsub("tusen"," tusen ")
+    end
+    s = s:gsub("etttusen","ettusen")
+    s = s:gsub("  "," ")
+    
+    return s
 end
 
 print(translate(tonumber(arg[1])))
