@@ -40,63 +40,59 @@ local words = {
 
 local function translate(n)
     local t = {}
-    local oldn = n
 
-    if n == 0 then 
-        return words[0] 
+    if n == 0 then
+        return words[0]
     end
 
-    -- Deal with numbers bigger than 999999.
-    for _, bignum in ipairs({10^15,10^12,10^9,10^6}) do
-        if floor(n/bignum) > 0 then 
-            t[#t+1] = translate(floor(n/bignum))
-            -- For millions (and bigger) "1" is "en", not "ett", 
-            if t[#t] == words[1] then
-                t[#t] = "en"
-            end
-            -- and plural form ending with "-er"
-            if floor(n/bignum) > 1 then
-                t[#t+1] = " "..words[bignum].."er "
-            else
-                t[#t+1] = " "..words[bignum].." "
-            end
-            n = n % bignum
-        end 
-    end
-    
-    -- Deal with 1000s
-    if floor(n/1000) > 0 then 
-        t[#t+1] = translate(floor(n/1000))
-        t[#t+1] = words[1000]
-        n = n % 1000
-    end
-    
-    -- Deal with 100s
-    if floor(n/100) > 0 then 
-        t[#t+1] = translate(floor(n/100))
-        t[#t+1] = words[100]
-        n = n % 100
-    end    
-    
-    -- Deal with <100s
-    if n > 0 then
-        if n < 20 then
-            t[#t+1] = words[n]
-        else
-            t[#t+1] = words[floor(n-n%10)]
+    -- group of three digits to words, e.g. 123 -> etthundratjugotre
+    local function tripletWords(n)
+        local s = ""
+        if floor(n/100) > 0 then
+            s = s..words[floor(n/100)]..words[100]
+        end
+        if n%100 > 20 then
+            s = s..words[n%100-n%10]
             if n%10 > 0 then
-                t[#t+1] = words[n%10]
+                s = s..words[n%10]
+            end
+        elseif n%100 > 0 then
+            s = s..words[n%100]
+        end
+        return s
+    end
+    
+    -- loops through 10^15,10^12,...10^3, extracting groups of three digits
+    -- to make words from, then adding names for order of magnitude
+    for i=15,3,-3 do
+        local triplet = floor(n/10^i)%10^3
+        if triplet > 0 then
+            -- grammar: "en" instead of "ett"
+            if i > 3 and triplet == 1 then
+                t[#t+1] = "en"
+            else
+                t[#t+1] = tripletWords(triplet)
+            end
+            -- grammar: plural form of "millions" etc
+            if i > 3 and triplet > 1 then
+                t[#t+1] = words[10^i].."er"
+            else
+                t[#t+1] = words[10^i]
             end
         end
     end
-        
-    local s = concat(t,"")
     
-    if oldn >= 10^6 then
-        s = s:gsub("tusen"," tusen ")
+    -- add last group of three numbers (no word for magnitude)
+    if n%1000 > 0 then
+        t[#t+1] = tripletWords(n%1000)
     end
-    s = s:gsub("etttusen","ettusen")
-    s = s:gsub("  "," ")
+    
+    local s = concat(t," ")
+    -- grammar: spacing for numbers < 10^6 and repeated letters
+    if n < 10^6 then
+        s = s:gsub("%stusen%s","tusen")
+        s = s:gsub("etttusen","ettusen")
+    end
     
     return s
 end
